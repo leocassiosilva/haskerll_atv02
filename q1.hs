@@ -1,0 +1,1 @@
+calcCirc x = x * 3.1416
