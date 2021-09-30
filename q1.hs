@@ -1,1 +1,1 @@
-calcCirc x = x * 3.1416
+calcCirc x = pi * x ^ 2

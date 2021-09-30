@@ -1,6 +1,8 @@
-calculadora :: (String, Int, Int) -> Int
-calculadora (op, n1, n2) = if(op == "*") then (n1 * n2) else
-                           if(op == "+") then (n1 + n2) else 
-                           if(op == "-") then (n1 - n2) else
-                           if(op == "/") then (div n1 n2)
-                           else 0
+calculadora :: (Char, Float, Float) -> Float
+calculadora (op, n1, n2) = | (op == '+') = n1 + n2
+                           | (op == '-') = n1 - n2
+                           | (op == '*') = n1 * n2
+                           | (op == '/') && (n2 /= 0) = n1 / n2
+                           | (op == '/') && (n2 == 0) = error "divisor deve ser diferente de 0"
+                           | otherwise = error "operador invalido"
+
